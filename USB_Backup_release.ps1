@@ -50,7 +50,7 @@ else { #Else_1
 	$Documents 	 = 	Get-ChildItem -Recurse "$path\documents" | Measure-Object -property length -sum
 	$Downloads 	 = 	Get-ChildItem -Recurse "$path\Downloads" | Measure-Object -property length -sum
 	$Favorites	 = 	Get-ChildItem -Recurse "$path\Favorites" | Measure-Object -property length -sum
-    $appdata	 = 	Get-ChildItem -Recurse "$path\AppData" | Measure-Object -property length -sum
+    	$appdata	 = 	Get-ChildItem -Recurse "$path\AppData" | Measure-Object -property length -sum
 	
 	$DataFilesize = ( ($Desktop.sum + $Documents.SUM + $Pictures.Sum + $Downloads.sum + $Favorites.sum + $Music.sum )   / 1MB ) #here you can use / 1GB/MB/KB to calculate to which unit you prefer
 	
